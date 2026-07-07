@@ -1,0 +1,7 @@
+sentence-transformers
+rank-bm25
+numpy
+pypdf
+ollama
+pytest
+ruff
