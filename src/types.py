@@ -1,19 +1,18 @@
+import hashlib
 from dataclasses import dataclass, field
 from typing import Any
 
 
-@dataclass(slots=True)
+@dataclass(frozen=True, slots=True)
 class Chunk:
-    """A single piece of a document, ready to be embedded and searched.
-
-    Attributes:
-        text: The chunk's raw text content.
-        source: Where it came from (e.g. the filename).
-        chunk_id: Position of this chunk within its source, starting at 0.
-        metadata: Optional extra info (page number, headings, etc.).
-    """
-
+    chunk_id: str                # sha256 of the text — stable content ID
+    doc_id: str                  # relative path of the source file
     text: str
-    source: str
-    chunk_id: int
+    position: int                # 0-based order within its document
     metadata: dict[str, Any] = field(default_factory=dict)
+
+
+def make_chunk(text: str, doc_id: str, position: int,
+               metadata: dict[str, Any] | None = None) -> Chunk:
+    chunk_id = hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
+    return Chunk(chunk_id, doc_id, text, position, metadata or {})
