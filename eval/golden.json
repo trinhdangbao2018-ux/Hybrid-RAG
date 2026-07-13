@@ -1,0 +1,92 @@
+[
+  {
+    "type": "paraphrase",
+    "question": "What happens if the documents folder contains an Excel file?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "skipped with a warning"
+  },
+  {
+    "type": "paraphrase",
+    "question": "Why was 350 picked as the maximum chunk size?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "comfortable safety margin"
+  },
+  {
+    "type": "paraphrase",
+    "question": "Will a chunk get a different identifier if I rebuild the index?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "Same text, same ID, every time"
+  },
+  {
+    "type": "paraphrase",
+    "question": "Why doesn't the merging step need to calibrate the scores of the two searchers?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "looks at ranks, never at raw scores"
+  },
+  {
+    "type": "paraphrase",
+    "question": "What should the answer model do when the context doesn't contain the answer?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "say so rather than make things up"
+  },
+  {
+    "type": "paraphrase",
+    "question": "Does this system send my data to the internet?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "no cloud API is involved anywhere"
+  },
+  {
+    "type": "paraphrase",
+    "question": "The cross-encoder is slow, so how can the pipeline afford to use it?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "small fused shortlist"
+  },
+  {
+    "type": "paraphrase",
+    "question": "If a word is repeated many times, does its score keep growing forever?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "ten repeats don't beat five by much"
+  },
+  {
+    "type": "keyword",
+    "question": "What is argpartition used for?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "argpartition"
+  },
+  {
+    "type": "keyword",
+    "question": "Which version of the bm25s library does the project use?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "0.3.9"
+  },
+  {
+    "type": "keyword",
+    "question": "What kind of model is ms-marco-MiniLM-L6-v2?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "ms-marco-MiniLM-L6-v2"
+  },
+  {
+    "type": "keyword",
+    "question": "How many dimensions does a bge-small-en-v1.5 vector have?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "384-dimensional"
+  },
+  {
+    "type": "keyword",
+    "question": "Which model runs on Ollama?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "llama3.2"
+  },
+  {
+    "type": "keyword",
+    "question": "What is the RRF score formula for a chunk at rank r?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "1 / (60 + r)"
+  },
+  {
+    "type": "keyword",
+    "question": "What prefix must be added to a query before embedding it with BGE?",
+    "expect_doc": "rag-tech-stack.md",
+    "expect_phrase": "Represent this sentence for searching relevant passages"
+  }
+]
