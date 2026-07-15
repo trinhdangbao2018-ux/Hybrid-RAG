@@ -17,4 +17,4 @@ class VectorRetriever:
         top_n = min(top_n, len(scores))
         idx = np.argpartition(scores, -top_n)[-top_n:]      # top-n, unordered
         idx = idx[np.argsort(scores[idx])[::-1]]            # order those n
-        return [(self.chunks[i].chunk_id, float(scores[i])) for i in idx]
+        return [(self.chunks[i].chunk_id, float(scores[i])) for i in idx if scores[i] >0]       # i>0: this basically never happen, this is just an defensive program
