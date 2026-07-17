@@ -13,6 +13,11 @@ class Config:
     rerank_model: str = "cross-encoder/ms-marco-MiniLM-L6-v2"
     top_k: int = 5                       # chunks that reach the LLM
     ollama_model: str = "llama3.2"
+    # temperature = luck in the LLM's word-by-word pick (each word is chosen from
+    # a ranked candidate list). 0 = always the #1 word -> follows the documents,
+    # same answer every run. Higher = underdog words sometimes win -> varied
+    # wording, but every lucky pick drifts from the evidence. 0.3-0.4 mild, 0.7+ dice.
+    temperature: float = 0.0
 
 #After this step the only thing that needed is to import CONFIG from here
 CONFIG = Config()

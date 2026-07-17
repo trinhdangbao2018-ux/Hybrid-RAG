@@ -35,7 +35,8 @@ def generate(question: str, chunks: list[Chunk],
     prompt = build_prompt(question, chunks)                              
     try:
             resp= ollama.chat (model=model,                        # Take the model from Config
-            messages=[{"role": "user", "content": prompt}],       # Role of the person who write prompt 
+            messages=[{"role": "user", "content": prompt}],       # Role of the person who write prompt
+            options={"temperature": CONFIG.temperature},          # creativity knob lives in config, not hardcoded
         )
     except Exception as e:
         raise RuntimeError(
