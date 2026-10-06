@@ -1,0 +1,220 @@
+{
+ "documents": 41,
+ "chunks": 944,
+ "questions": 63,
+ "top_k": 5,
+ "modes": {
+  "vector": {
+   "overall": {
+    "n": 63,
+    "hit@1": 0.6349206349206349,
+    "hit@k": 0.9047619047619048,
+    "mrr": 0.7566137566137567
+   },
+   "by_type": {
+    "paraphrase": {
+     "n": 33,
+     "hit@1": 0.5757575757575758,
+     "hit@k": 0.8484848484848485,
+     "mrr": 0.7020202020202021
+    },
+    "keyword": {
+     "n": 30,
+     "hit@1": 0.7,
+     "hit@k": 0.9666666666666667,
+     "mrr": 0.8166666666666667
+    }
+   },
+   "ms_per_query": 34.4,
+   "failures": [
+    {
+     "question": "What kind of model is ms-marco-MiniLM-L6-v2?",
+     "type": "keyword"
+    },
+    {
+     "question": "Why does the bell curve show up so often when a measurement is the sum of many small independent effects?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "If I nudge the input of a function slightly, how much does the output move?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Why is it wasteful to update parameters one example at a time?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "What assumption about drawing training instances from a distribution was glossed over?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Are derivatives with respect to vectors messy to compute, and how do the answers compare to the one-variable case?",
+     "type": "paraphrase"
+    }
+   ]
+  },
+  "bm25": {
+   "overall": {
+    "n": 63,
+    "hit@1": 0.6031746031746031,
+    "hit@k": 0.7777777777777778,
+    "mrr": 0.6798941798941798
+   },
+   "by_type": {
+    "paraphrase": {
+     "n": 33,
+     "hit@1": 0.45454545454545453,
+     "hit@k": 0.6060606060606061,
+     "mrr": 0.5151515151515151
+    },
+    "keyword": {
+     "n": 30,
+     "hit@1": 0.7666666666666667,
+     "hit@k": 0.9666666666666667,
+     "mrr": 0.861111111111111
+    }
+   },
+   "ms_per_query": 0.6,
+   "failures": [
+    {
+     "question": "Will a chunk get a different identifier if I rebuild the index?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Does this system send my data to the internet?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "If a word is repeated many times, does its score keep growing forever?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Why does the bell curve show up so often when a measurement is the sum of many small independent effects?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "How do we define likelihood for continuous variables when the chance of hitting an exact value is zero?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "If I nudge the input of a function slightly, how much does the output move?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Can we always get back the exact true weights after training a model?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "What is the point of training on artificially generated data?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Does lowering the step size over the course of training help with overfitting?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "What is automatic differentiation and why do frameworks provide it?",
+     "type": "keyword"
+    },
+    {
+     "question": "If a fair coin gives unequal heads and tails in a few flips, is something wrong?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Why is it bad if repeatedly applying a matrix makes a random vector extremely long?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Can an integral come out as a negative number, and how should that be read as an area?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Are derivatives with respect to vectors messy to compute, and how do the answers compare to the one-variable case?",
+     "type": "paraphrase"
+    }
+   ]
+  },
+  "hybrid": {
+   "overall": {
+    "n": 63,
+    "hit@1": 0.6825396825396826,
+    "hit@k": 0.9365079365079365,
+    "mrr": 0.7783068783068784
+   },
+   "by_type": {
+    "paraphrase": {
+     "n": 33,
+     "hit@1": 0.5454545454545454,
+     "hit@k": 0.8787878787878788,
+     "mrr": 0.6626262626262627
+    },
+    "keyword": {
+     "n": 30,
+     "hit@1": 0.8333333333333334,
+     "hit@k": 1.0,
+     "mrr": 0.9055555555555556
+    }
+   },
+   "ms_per_query": 39.8,
+   "failures": [
+    {
+     "question": "If a word is repeated many times, does its score keep growing forever?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Why does the bell curve show up so often when a measurement is the sum of many small independent effects?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "What is the point of training on artificially generated data?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "Are derivatives with respect to vectors messy to compute, and how do the answers compare to the one-variable case?",
+     "type": "paraphrase"
+    }
+   ]
+  },
+  "hybrid+rerank": {
+   "overall": {
+    "n": 63,
+    "hit@1": 0.8253968253968254,
+    "hit@k": 0.9365079365079365,
+    "mrr": 0.8695767195767197
+   },
+   "by_type": {
+    "paraphrase": {
+     "n": 33,
+     "hit@1": 0.7575757575757576,
+     "hit@k": 0.9090909090909091,
+     "mrr": 0.8116161616161616
+    },
+    "keyword": {
+     "n": 30,
+     "hit@1": 0.9,
+     "hit@k": 0.9666666666666667,
+     "mrr": 0.9333333333333333
+    }
+   },
+   "ms_per_query": 1555.4,
+   "failures": [
+    {
+     "question": "Does this system send my data to the internet?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "If I nudge the input of a function slightly, how much does the output move?",
+     "type": "paraphrase"
+    },
+    {
+     "question": "What is epsilon typically set to in RMSProp and why?",
+     "type": "keyword"
+    },
+    {
+     "question": "Are derivatives with respect to vectors messy to compute, and how do the answers compare to the one-variable case?",
+     "type": "paraphrase"
+    }
+   ]
+  }
+ }
+}

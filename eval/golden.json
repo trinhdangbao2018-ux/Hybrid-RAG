@@ -1,92 +1,380 @@
 [
-  {
-    "type": "paraphrase",
-    "question": "What happens if the documents folder contains an Excel file?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "skipped with a warning"
-  },
-  {
-    "type": "paraphrase",
-    "question": "Why was 350 picked as the maximum chunk size?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "comfortable safety margin"
-  },
-  {
-    "type": "paraphrase",
-    "question": "Will a chunk get a different identifier if I rebuild the index?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "Same text, same ID, every time"
-  },
-  {
-    "type": "paraphrase",
-    "question": "Why doesn't the merging step need to calibrate the scores of the two searchers?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "looks at ranks, never at raw scores"
-  },
-  {
-    "type": "paraphrase",
-    "question": "What should the answer model do when the context doesn't contain the answer?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "say so rather than make things up"
-  },
-  {
-    "type": "paraphrase",
-    "question": "Does this system send my data to the internet?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "no cloud API is involved anywhere"
-  },
-  {
-    "type": "paraphrase",
-    "question": "The cross-encoder is slow, so how can the pipeline afford to use it?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "small fused shortlist"
-  },
-  {
-    "type": "paraphrase",
-    "question": "If a word is repeated many times, does its score keep growing forever?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "ten repeats don't beat five by much"
-  },
-  {
-    "type": "keyword",
-    "question": "What is argpartition used for?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "argpartition"
-  },
-  {
-    "type": "keyword",
-    "question": "Which version of the bm25s library does the project use?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "0.3.9"
-  },
-  {
-    "type": "keyword",
-    "question": "What kind of model is ms-marco-MiniLM-L6-v2?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "ms-marco-MiniLM-L6-v2"
-  },
-  {
-    "type": "keyword",
-    "question": "How many dimensions does a bge-small-en-v1.5 vector have?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "384-dimensional"
-  },
-  {
-    "type": "keyword",
-    "question": "Which model runs on Ollama?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "llama3.2"
-  },
-  {
-    "type": "keyword",
-    "question": "What is the RRF score formula for a chunk at rank r?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "1 / (60 + r)"
-  },
-  {
-    "type": "keyword",
-    "question": "What prefix must be added to a query before embedding it with BGE?",
-    "expect_doc": "rag-tech-stack.md",
-    "expect_phrase": "Represent this sentence for searching relevant passages"
-  }
+ {
+  "type": "paraphrase",
+  "question": "What happens if the documents folder contains an Excel file?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "skipped with a warning"
+ },
+ {
+  "type": "paraphrase",
+  "question": "Why was 350 picked as the maximum chunk size?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "comfortable safety margin"
+ },
+ {
+  "type": "paraphrase",
+  "question": "Will a chunk get a different identifier if I rebuild the index?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "Same text, same ID, every time"
+ },
+ {
+  "type": "paraphrase",
+  "question": "Why doesn't the merging step need to calibrate the scores of the two searchers?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "looks at ranks, never at raw scores"
+ },
+ {
+  "type": "paraphrase",
+  "question": "What should the answer model do when the context doesn't contain the answer?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "say so rather than make things up"
+ },
+ {
+  "type": "paraphrase",
+  "question": "Does this system send my data to the internet?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "no cloud API is involved anywhere"
+ },
+ {
+  "type": "paraphrase",
+  "question": "The cross-encoder is slow, so how can the pipeline afford to use it?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "small fused shortlist"
+ },
+ {
+  "type": "paraphrase",
+  "question": "If a word is repeated many times, does its score keep growing forever?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "ten repeats don't beat five by much"
+ },
+ {
+  "type": "keyword",
+  "question": "What is argpartition used for?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "argpartition"
+ },
+ {
+  "type": "keyword",
+  "question": "Which version of the bm25s library does the project use?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "0.3.9"
+ },
+ {
+  "type": "keyword",
+  "question": "What kind of model is ms-marco-MiniLM-L6-v2?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "ms-marco-MiniLM-L6-v2"
+ },
+ {
+  "type": "keyword",
+  "question": "How many dimensions does a bge-small-en-v1.5 vector have?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "384-dimensional"
+ },
+ {
+  "type": "keyword",
+  "question": "Which model runs on Ollama?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "llama3.2"
+ },
+ {
+  "type": "keyword",
+  "question": "What is the RRF score formula for a chunk at rank r?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "1 / (60 + r)"
+ },
+ {
+  "type": "keyword",
+  "question": "What prefix must be added to a query before embedding it with BGE?",
+  "expect_doc": "rag-tech-stack.md",
+  "expect_phrase": "Represent this sentence for searching relevant passages"
+ },
+ {
+  "question": "Why does the bell curve show up so often when a measurement is the sum of many small independent effects?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/distributions.md",
+  "expect_phrase": "sum of many small independent contributions"
+ },
+ {
+  "question": "How is the rank of a matrix related to its eigenvalues?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/eigendecomposition.md",
+  "expect_phrase": "the rank is the same as the number of non-zero eigenvalues"
+ },
+ {
+  "question": "How can knowing what a matrix does to just two specific vectors tell us what it does to every vector?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.md",
+  "expect_phrase": "reduced an infinite problem"
+ },
+ {
+  "question": "Do deep learning practitioners need to fully understand the underlying math to use the tools?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/index.md",
+  "expect_phrase": "This is a sign that the field is maturing"
+ },
+ {
+  "question": "What thought experiment with a deck of cards introduces the notion of information?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/information-theory.md",
+  "expect_phrase": "We have a friend with a deck of cards"
+ },
+ {
+  "question": "What is the main computational tool used to find integrals?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/integral-calculus.md",
+  "expect_phrase": "learn the main computational tool used to find integrals"
+ },
+ {
+  "question": "How do we define likelihood for continuous variables when the chance of hitting an exact value is zero?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/maximum-likelihood.md",
+  "expect_phrase": "matching to within some range"
+ },
+ {
+  "question": "How can second derivatives be used to find the best fitting quadratic near a point?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/multivariable-calculus.md",
+  "expect_phrase": "find the best fitting quadratic near a point"
+ },
+ {
+  "question": "Why can the denominator be ignored when picking the most likely label with Bayes theorem?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/naive-bayes.md",
+  "expect_phrase": "which does not depend on the value of the label"
+ },
+ {
+  "question": "Can two random variables have zero covariance even if one is a deterministic function of the other?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/random-variables.md",
+  "expect_phrase": "despite one being a deterministic function of the other"
+ },
+ {
+  "question": "If I nudge the input of a function slightly, how much does the output move?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/single-variable-calculus.md",
+  "expect_phrase": "change the input by a small amount"
+ },
+ {
+  "question": "What is the essential difference between machine learning and statistics?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/statistics.md",
+  "expect_phrase": "statistics focuses on the inference problem"
+ },
+ {
+  "question": "How much data is typically available for medical problems compared to image collections?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/linear-regression/generalization.md",
+  "expect_phrase": "we can only access a few thousand data points"
+ },
+ {
+  "question": "What is the difference between Linear and LazyLinear in PyTorch?",
+  "type": "keyword",
+  "expect_doc": "d2l/linear-regression/linear-regression-concise.md",
+  "expect_phrase": "Specifying input shapes is inconvenient"
+ },
+ {
+  "question": "Can we always get back the exact true weights after training a model?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/linear-regression/linear-regression-scratch.md",
+  "expect_phrase": "exactly recover the ground truth parameters"
+ },
+ {
+  "question": "What does a loss function quantify in regression?",
+  "type": "keyword",
+  "expect_doc": "d2l/linear-regression/linear-regression.md",
+  "expect_phrase": "smaller values are better and perfect predictions incur a loss of 0"
+ },
+ {
+  "question": "How can I attach a new method to a class after it has already been defined in a notebook?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/linear-regression/oo-design.md",
+  "expect_phrase": "register functions as methods in a class"
+ },
+ {
+  "question": "What is the point of training on artificially generated data?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/linear-regression/synthetic-regression-data.md",
+  "expect_phrase": "such datasets are nevertheless useful for didactic purposes"
+ },
+ {
+  "question": "How does an l2 penalty lead to weight decay?",
+  "type": "keyword",
+  "expect_doc": "d2l/linear-regression/weight-decay.md",
+  "expect_phrase": "Regularization is a common method for dealing with overfitting"
+ },
+ {
+  "question": "What two state variables does Adadelta use?",
+  "type": "keyword",
+  "expect_doc": "d2l/optimization/adadelta.md",
+  "expect_phrase": "Adadelta uses two state variables"
+ },
+ {
+  "question": "Why is a single decreasing step size a problem for features that rarely appear?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/optimization/adagrad.md",
+  "expect_phrase": "features that occur only infrequently"
+ },
+ {
+  "question": "Why is SGD more effective than gradient descent according to the recap before Adam?",
+  "type": "keyword",
+  "expect_doc": "d2l/optimization/adam.md",
+  "expect_phrase": "due to its inherent resilience to redundant data"
+ },
+ {
+  "question": "How do walls pushing back on a rolling object relate to solving problems with constraints?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/optimization/convexity.md",
+  "expect_phrase": "Imagine a ball inside a box"
+ },
+ {
+  "question": "How does line search help gradient descent avoid overshooting?",
+  "type": "keyword",
+  "expect_doc": "d2l/optimization/gd.md",
+  "expect_phrase": "use line search in conjunction with gradient descent"
+ },
+ {
+  "question": "Does lowering the step size over the course of training help with overfitting?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/optimization/lr-scheduler.md",
+  "expect_phrase": "Decreasing the learning rate during training can lead to improved accuracy"
+ },
+ {
+  "question": "Why is it wasteful to update parameters one example at a time?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/optimization/minibatch-sgd.md",
+  "expect_phrase": "Processing single observations requires us to perform many single"
+ },
+ {
+  "question": "What goes wrong if the learning rate is reduced too quickly when gradients are noisy?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/optimization/momentum.md",
+  "expect_phrase": "If we decrease it too rapidly, convergence stalls"
+ },
+ {
+  "question": "What do the eigenvalues of the Hessian tell us at a zero-gradient point?",
+  "type": "keyword",
+  "expect_doc": "d2l/optimization/optimization-intro.md",
+  "expect_phrase": "Hessian matrix at the zero-gradient position are all positive"
+ },
+ {
+  "question": "What is epsilon typically set to in RMSProp and why?",
+  "type": "keyword",
+  "expect_doc": "d2l/optimization/rmsprop.md",
+  "expect_phrase": "to ensure that we do not suffer from division by zero"
+ },
+ {
+  "question": "What assumption about drawing training instances from a distribution was glossed over?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/optimization/sgd.md",
+  "expect_phrase": "played a bit fast and loose"
+ },
+ {
+  "question": "What is automatic differentiation and why do frameworks provide it?",
+  "type": "keyword",
+  "expect_doc": "d2l/preliminaries/autograd.md",
+  "expect_phrase": "working them out by hand can be tedious and error-prone"
+ },
+ {
+  "question": "Which branch of math tells us how to change a function's arguments to make its value go down?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/preliminaries/calculus.md",
+  "expect_phrase": "how to increase or decrease a function's value by manipulating its arguments"
+ },
+ {
+  "question": "How can a vector represent a loan applicant?",
+  "type": "keyword",
+  "expect_doc": "d2l/preliminaries/linear-algebra.md",
+  "expect_phrase": "predict the risk of a loan defaulting"
+ },
+ {
+  "question": "How do I list everything that is available inside a Python module?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/preliminaries/lookup-api.md",
+  "expect_phrase": "To know which functions and classes can be called in a module"
+ },
+ {
+  "question": "What are elementwise operations on tensors?",
+  "type": "keyword",
+  "expect_doc": "d2l/preliminaries/ndarray.md",
+  "expect_phrase": "apply a standard scalar operation to each element of a tensor"
+ },
+ {
+  "question": "What should I do with missing values in a categorical column?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/preliminaries/pandas.md",
+  "expect_phrase": "Here are some common imputation heuristics"
+ },
+ {
+  "question": "If a fair coin gives unequal heads and tails in a few flips, is something wrong?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/preliminaries/probability.md",
+  "expect_phrase": "the counts of heads and tails may not be identical"
+ },
+ {
+  "question": "How can waiting for buses motivate a distribution for counting arrivals?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/distributions.md",
+  "expect_phrase": "We are standing at a bus stop"
+ },
+ {
+  "question": "Why is it bad if repeatedly applying a matrix makes a random vector extremely long?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/eigendecomposition.md",
+  "expect_phrase": "small changes in input will be amplified into large changes in output"
+ },
+ {
+  "question": "When are two vectors orthogonal?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/geometry-linear-algebraic-ops.md",
+  "expect_phrase": "The only way this can happen is if the dot product itself is zero"
+ },
+ {
+  "question": "How many bits of information is the order of a full shuffled deck of 52 cards?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/information-theory.md",
+  "expect_phrase": "flip over every card from the deck"
+ },
+ {
+  "question": "Can an integral come out as a negative number, and how should that be read as an area?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/integral-calculus.md",
+  "expect_phrase": "Mathematicians take the notion of signed areas"
+ },
+ {
+  "question": "Why do people work with the negative log-likelihood?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/maximum-likelihood.md",
+  "expect_phrase": "conversion of products to sums"
+ },
+ {
+  "question": "Are derivatives with respect to vectors messy to compute, and how do the answers compare to the one-variable case?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/multivariable-calculus.md",
+  "expect_phrase": "The final results are much cleaner than the intermediate process"
+ },
+ {
+  "question": "Why is the variance awkward to interpret in terms of units?",
+  "type": "paraphrase",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/random-variables.md",
+  "expect_phrase": "there can be a bit of a hiccup"
+ },
+ {
+  "question": "Which functions can have their derivative computed mechanically by following rules?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/single-variable-calculus.md",
+  "expect_phrase": "can have its derivative computed mechanically by following these rules"
+ },
+ {
+  "question": "What is statistical bias of an estimator?",
+  "type": "keyword",
+  "expect_doc": "d2l/appendix-mathematics-for-deep-learning/statistics.md",
+  "expect_phrase": "systematic error in the estimator due to the estimation procedure"
+ },
+ {
+  "question": "What is overfitting and what are regularization methods?",
+  "type": "keyword",
+  "expect_doc": "d2l/linear-regression/generalization.md",
+  "expect_phrase": "The phenomenon of fitting closer to our training data than to the underlying distribution"
+ }
 ]
